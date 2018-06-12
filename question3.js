@@ -10,9 +10,8 @@
 // 2¢, 2¢
 
 const changePossibilities = (amount, denominations) => {
-  let numOfWays = Array.apply(null, Array(amount + 1)).map((el) => {
-    return el = 0;
-  });
+  let numOfWays = Array.apply(null, Array(amount + 1))
+                       .map((el) => { return el = 0; })
   numOfWays[0] = 1;
 
   denominations.forEach((coin) => {
@@ -21,7 +20,7 @@ const changePossibilities = (amount, denominations) => {
         numOfWays[i] += numOfWays[(i - coin)];
       }
     }
-  });
+  })
 
   return numOfWays[amount];
 }

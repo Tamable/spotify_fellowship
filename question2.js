@@ -8,6 +8,7 @@
 const decodeString = (s) => {
   let decodedStr = '';
   let repeatNum;
+
   for (let i = 0; i < s.length; i++) {
     let numCheck = Number(s[i]);
     if (isNaN(numCheck) === false) {
